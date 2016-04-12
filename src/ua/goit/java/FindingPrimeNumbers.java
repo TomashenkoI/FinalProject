@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Main {
+public class FindingPrimeNumbers {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -34,3 +34,4 @@ public class Main {
         }
     }
 }
+
