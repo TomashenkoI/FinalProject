@@ -3,9 +3,13 @@ package ua.goit.java;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class SieveOfEratosthenes {
-    public static void numbersFiltering(int number, HashMap<Integer, Integer> list, ArrayList<Integer> leftNumbers) {
+    public static List<Integer> numbersFiltering(int number) {
+
+        HashMap<Integer, Integer> list = new HashMap<>();
+        ArrayList<Integer> leftNumbers = new ArrayList<>();
 
         for (int i = 2; i < number+1; i++) {
             list.put(i, i);
@@ -23,7 +27,7 @@ public class SieveOfEratosthenes {
             if (list.get(i) != null) {
                 leftNumbers.add(list.get(i));
             }
-        }
+        } return leftNumbers;
     }
 }
 

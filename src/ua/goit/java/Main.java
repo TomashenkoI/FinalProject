@@ -1,10 +1,8 @@
 package ua.goit.java;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Scanner;
 
-public class FindingPrimeNumbers {
+public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -20,13 +18,8 @@ public class FindingPrimeNumbers {
         }
         if (number > 2) {
         try {
-            HashMap<Integer, Integer> list = new HashMap<>();
-            ArrayList<Integer> leftNumbers = new ArrayList<>();
-
-            SieveOfEratosthenes.numbersFiltering(number, list, leftNumbers);
-
             System.out.println("Prime numbers below " + number + ":");
-            System.out.println(leftNumbers);
+            System.out.println(SieveOfEratosthenes.numbersFiltering(number));
         }
         catch (NumberFormatException e) {
             System.out.println("It must be a digital number!");
