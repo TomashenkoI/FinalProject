@@ -13,7 +13,12 @@ public class Main {
 
         int number = input.checkNumber(Integer.parseInt(enteredNumber));
 
-        System.out.println(SieveOfEratosthenes.numbersFiltering(number));
+        if (number > 0) {
+            System.out.println(SieveOfEratosthenes.numbersFiltering(number));
+        }
+        else {
+            System.out.println("Error!");
+        }
 
         }
     }

@@ -5,21 +5,24 @@ package ua.goit.java;
  */
 public class Input {
     public int checkNumber(int number) {
-        if (number <= 0) {
+        if (number < 0) {
             //забыл как правильно кидаать эксепшен, потом поправлю
-            return -1;
             System.err.println("Number should be more than 0");
+            return -1;
         }
         if (number > 0 && number < 2) {
-            retirn -1;
             System.err.println("There is no prime numbers below " + number);
+            return -1;
         }
         if (number > 2) {
             try {
                 return number;
             } catch (NumberFormatException e) {
+
                 System.out.println("It must be a digital number!");
             }
+
         }
+        return -1;
     }
 }
