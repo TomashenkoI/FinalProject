@@ -27,9 +27,7 @@ public class Input {
     }
 
     public int readConsole(){
-        Scanner scanner = new Scanner(System.in);
-
-
+        Scanner scanner = getScanner();
         int number = -1;
 
         Input input = new Input();
@@ -38,6 +36,10 @@ public class Input {
                 System.out.println("Enter the number:");
                 String enteredNumber = scanner.nextLine();
                 number = Integer.parseInt(enteredNumber);
+                if (number < 2) {
+                    System.out.println("Number should be more than 2");
+                    number = -1;
+                }
             } catch (NumberFormatException e) {
                 System.out.println("It must be a digital number!");
             }
@@ -45,6 +47,10 @@ public class Input {
 
 
         return number;
+    }
+
+    public Scanner getScanner(){
+        return new Scanner(System.in);
     }
 
 }
