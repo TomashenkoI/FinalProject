@@ -28,16 +28,23 @@ public class Input {
 
     public int readConsole(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the number:");
-        String enteredNumber = scanner.nextLine();
+
+
+        int number = -1;
 
         Input input = new Input();
-        try {
-
-            return input.checkNumber(Integer.parseInt(enteredNumber));
-        } catch (NumberFormatException e) {
-            throw new IllegalArgumentException("It must be a digital number!");
+        while (number == -1) {
+            try {
+                System.out.println("Enter the number:");
+                String enteredNumber = scanner.nextLine();
+                number = Integer.parseInt(enteredNumber);
+            } catch (NumberFormatException e) {
+                System.out.println("It must be a digital number!");
+            }
         }
+
+
+        return number;
     }
 
 }
