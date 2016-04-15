@@ -1,28 +1,43 @@
 package ua.goit.java;
 
+import java.util.Scanner;
+
 /**
  * Created by GRSV on 15.04.2016.
  */
 public class Input {
     public int checkNumber(int number) {
         if (number < 0) {
-            //забыл как правильно кидаать эксепшен, потом поправлю
-            System.err.println("Number should be more than 0");
-            return -1;
+            throw new IllegalArgumentException("Number should be more than 0");
         }
         if (number > 0 && number < 2) {
-            System.err.println("There is no prime numbers below " + number);
-            return -1;
+            throw new IllegalArgumentException("There is no prime numbers below " + number);
         }
         if (number > 2) {
             try {
                 return number;
             } catch (NumberFormatException e) {
 
-                System.out.println("It must be a digital number!");
+                throw new IllegalArgumentException("It must be a digital number!");
             }
 
         }
-        return -1;
+
+        throw new IllegalArgumentException("It must be a digital number!");
     }
+
+    public int readConsole(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number:");
+        String enteredNumber = scanner.nextLine();
+
+        Input input = new Input();
+        try {
+
+            return input.checkNumber(Integer.parseInt(enteredNumber));
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("It must be a digital number!");
+        }
+    }
+
 }
