@@ -44,8 +44,6 @@ public class Input {
                 System.out.println("It must be a digital number!");
             }
         }
-
-
         return number;
     }
 

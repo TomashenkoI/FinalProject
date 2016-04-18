@@ -5,8 +5,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class SieveOfEratosthenes {
-    public static List<Integer> numbersFiltering(int number) {
+public class SieveOfEratosthenes implements SimpleNumbers{
+
+    public List<Integer> numbersFiltering(int number) {
 
         HashMap<Integer, Integer> list = new HashMap<>();
         ArrayList<Integer> leftNumbers = new ArrayList<>();
@@ -27,7 +28,8 @@ public class SieveOfEratosthenes {
             if (list.get(i) != null) {
                 leftNumbers.add(list.get(i));
             }
-        } return leftNumbers;
+        }
+        return leftNumbers;
     }
 }
 
