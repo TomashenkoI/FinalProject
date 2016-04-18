@@ -7,6 +7,7 @@ import java.util.Scanner;
  */
 public class Input {
     public int checkNumber(int number) {
+
         if (number < 0) {
             throw new IllegalArgumentException("Number should be more than 0");
         }
@@ -22,7 +23,6 @@ public class Input {
             }
 
         }
-
         throw new IllegalArgumentException("It must be a digital number!");
     }
 

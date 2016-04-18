@@ -1,7 +1,5 @@
 package ua.goit.java;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -9,7 +7,8 @@ public class Main {
 
         int number = input.checkNumber(input.readConsole());
 
-        System.out.println(SieveOfEratosthenes.numbersFiltering(number));
+        SimpleNumbers sieveOfEratosthenes = new SieveOfEratosthenes();
 
+        System.out.println(sieveOfEratosthenes.numbersFiltering(number));
     }
 }

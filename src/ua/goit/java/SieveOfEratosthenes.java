@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+
 public class SieveOfEratosthenes implements SimpleNumbers{
 
     public List<Integer> numbersFiltering(int number) {
@@ -29,6 +30,7 @@ public class SieveOfEratosthenes implements SimpleNumbers{
                 leftNumbers.add(list.get(i));
             }
         }
+        System.out.println("Prime numbers below " + number + ":");
         return leftNumbers;
     }
 }
