@@ -5,7 +5,7 @@ public class Main {
 
         Input input = new Input();
 
-        int number = input.checkNumber(input.readConsole());
+        int number = input.readConsole();
 
         SimpleNumbers sieveOfEratosthenes = new SieveOfEratosthenes();
 
