@@ -13,7 +13,6 @@ public class InputTest extends TestCase {
         int number = Input.checkNumber(enteredText);
 
         Assert.assertEquals(number, 30);
-
     }
 }
 
