@@ -3,9 +3,9 @@ package ua.goit.java;
 public class Main {
     public static void main(String[] args) {
 
-        Input1 input1 = new Input1();
+        Input input = new Input();
 
-        int number = input1.getScanner();
+        int number = input.getScanner();
 
         SimpleNumbers sieveOfEratosthenes = new SieveOfEratosthenes();
 
