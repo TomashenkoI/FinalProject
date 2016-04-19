@@ -8,7 +8,6 @@ public class InputTest extends TestCase {
 
     @Test
     public void testCheckNumber() {
-
         String enteredText = "30";
         int number = 0;
 

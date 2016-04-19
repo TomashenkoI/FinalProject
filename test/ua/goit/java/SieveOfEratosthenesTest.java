@@ -13,7 +13,6 @@ public class SieveOfEratosthenesTest {
 
     @Test
     public void testNumbersFiltering() throws Exception {
-
         SimpleNumbers sieveOfEratosthenes = new SieveOfEratosthenes();
 
         List<Integer> primeNumbersBelow30 = new ArrayList<>();
