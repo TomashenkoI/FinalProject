@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Input {
 
     public int readConsole(){
-        Scanner scanner = getScanner();
+        Scanner scanner = new Scanner(System.in);
         int number = -1;
 
         while (number == -1) {
@@ -24,8 +24,11 @@ public class Input {
         return number;
     }
 
-    public Scanner getScanner(){
-        return new Scanner(System.in);
-    }
+    /*public int getNumberFromConsole() {
+        System.out.println("Enter the number:");
+        Scanner scanner = new Scanner(System.in);
+        String enteredStrNumber = scanner.nextLine();
+        return Integer.parseInt(enteredStrNumber);
+    }*/
 
 }
