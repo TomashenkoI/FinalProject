@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Input {
 
-    public static int checkNumber(int number, String enteredText) {
+    public static int checkNumber(String enteredText) {
+        int number = -1;
             try {
                 int enteredNumber = Integer.parseInt(enteredText);
                 if (enteredNumber <= 2) {
@@ -27,7 +28,7 @@ public class Input {
             System.out.println("Enter the number:");
             String enteredText = scanner.nextLine();
 
-            number = checkNumber(number, enteredText);
+            number = checkNumber(enteredText);
         }
         return  number;
     }
