@@ -12,7 +12,7 @@ public class InputTest extends TestCase {
         String enteredText = "30";
         int number = 0;
 
-        number = Input1.checkNumber(number, enteredText);
+        number = Input.checkNumber(number, enteredText);
 
         Assert.assertEquals(number, 30);
     }
