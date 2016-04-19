@@ -4,18 +4,19 @@ import java.util.Scanner;
 
 public class Input {
 
-    public static int checkNumber(int number, String enteredText) {
-            try {
-                int enteredNumber = Integer.parseInt(enteredText);
-                if (enteredNumber <= 2) {
-                    System.out.println("Number should be more than 2");
-                }
-                if (enteredNumber > 2) {
-                    number = enteredNumber;
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("It must be a digital number!");
+    public static int checkNumber(String enteredText) {
+        int number = -1;
+        try {
+            int enteredNumber = Integer.parseInt(enteredText);
+            if (enteredNumber <= 2) {
+                System.out.println("Number should be more than 2");
             }
+            if (enteredNumber > 2) {
+                number = enteredNumber;
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("It must be a digital number!");
+        }
         return number;
     }
 
@@ -27,7 +28,7 @@ public class Input {
             System.out.println("Enter the number:");
             String enteredText = scanner.nextLine();
 
-            number = checkNumber(number, enteredText);
+            number = checkNumber(enteredText);
         }
         return  number;
     }

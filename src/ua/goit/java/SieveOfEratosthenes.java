@@ -27,6 +27,7 @@ public class SieveOfEratosthenes implements SimpleNumbers{
                 leftNumbers.add(list.get(i));
             }
         }
+
         System.out.println("Prime numbers below " + number + ":");
         return leftNumbers;
     }
