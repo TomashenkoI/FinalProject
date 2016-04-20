@@ -8,8 +8,11 @@ public class Input {
         int number = -1;
         try {
             int enteredNumber = Integer.parseInt(enteredText);
-            if (enteredNumber <= 2) {
-                System.out.println("Number should be more than 2");
+            if (enteredNumber <= 0) {
+                System.out.println("Number should be more than 0");
+            }
+            if (enteredNumber > 0 && enteredNumber <= 2) {
+                System.out.println("There is no prime numbers below " + enteredNumber);
             }
             if (enteredNumber > 2) {
                 number = enteredNumber;
