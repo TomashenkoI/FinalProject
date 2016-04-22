@@ -14,5 +14,23 @@ public class InputTest extends TestCase {
 
         Assert.assertEquals(number, 30);
     }
+
+    @Test
+    public void testCheckNegativeNumber() {
+        String enteredText = "-48";
+
+        int number = Input.checkNumber(enteredText);
+
+        Assert.assertEquals(number, -1);
+    }
+
+    @Test
+    public void testCheckNumberWithoutPrimeNumbersBefore() {
+        String enteredText = "2";
+
+        int number = Input.checkNumber(enteredText);
+
+        Assert.assertEquals(number, -1);
+    }
 }
 
