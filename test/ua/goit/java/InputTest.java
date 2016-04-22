@@ -32,5 +32,14 @@ public class InputTest extends TestCase {
 
         Assert.assertEquals(number, -1);
     }
+
+    @Test
+    public void testCheckNotNumber() {
+        String enteredText = "1455F";
+
+        int number = Input.checkNumber(enteredText);
+
+        Assert.assertEquals(number, -1);
+    }
 }
 
